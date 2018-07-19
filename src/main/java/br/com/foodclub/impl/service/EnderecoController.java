@@ -27,12 +27,12 @@ public class EnderecoController implements EnderecoService{
 	}
 
 	@Override
-	public EnderecoCliente buscarCliente(String id_endereco) {
+	public EnderecoCliente buscarCliente(Integer id_endereco) {
 		return dao.BuscarEnderecoCliente(id_endereco);
 	}
 
 	@Override
-	public String deletarCliente(String id_endereco) {
+	public String deletarCliente(Integer id_endereco) {
 		return dao.DeletarEnderecoCliente(id_endereco);
 	}
 	
@@ -47,12 +47,12 @@ public class EnderecoController implements EnderecoService{
 	}
 
 	@Override
-	public EnderecoRest buscarRest(String id_endereco) {
+	public EnderecoRest buscarRest(Integer id_endereco) {
 		return dao.BuscarEnderecoRest(id_endereco);
 	}
 
 	@Override
-	public String deletarRest(String id_endereco) {
+	public String deletarRest(Integer id_endereco) {
 		return dao.DeletarEnderecoRest(id_endereco);
 	}
 

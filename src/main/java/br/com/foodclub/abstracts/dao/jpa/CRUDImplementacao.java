@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import br.com.foodclub.utils.ConnectionFactoryJPA;
 
 @Repository
-public abstract class CRUDImplementacao <T,K, txt> implements CRUDJPA<T, K, txt>{
+public abstract class CRUDImplementacao <T,K> implements CRUDJPA<T, K>{
 
 	private EntityManager em ;
 
@@ -42,12 +42,6 @@ public abstract class CRUDImplementacao <T,K, txt> implements CRUDJPA<T, K, txt>
 
 	@Override
 	public T getByID(K ID) {
-		T obj = em.find(clazz, ID);
-		return obj;
-	}
-
-	@Override
-	public T getByCode(txt ID) {
 		T obj = em.find(clazz, ID);
 		return obj;
 	}

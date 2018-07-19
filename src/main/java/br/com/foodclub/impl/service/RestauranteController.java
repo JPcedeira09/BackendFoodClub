@@ -46,9 +46,4 @@ public class RestauranteController implements RestauranteService{
 		return dao.ListarCardapio(CNPJ);
 	}
 
-	@Override
-	public Restaurante getByID(String ID) {
-		return dao.getByCode(ID);
-	}
-
 }

@@ -9,16 +9,16 @@ public interface EnderecoDAO {
 
     public EnderecoCliente AtualizarEnderecoCliente(EnderecoCliente endereco);
 
-    public EnderecoCliente BuscarEnderecoCliente(String id_endereco);
+    public EnderecoCliente BuscarEnderecoCliente(Integer id_endereco);
 
-    public String DeletarEnderecoCliente(String id_endereco);
+    public String DeletarEnderecoCliente(Integer id_endereco);
 
     public String CadastrarEnderecoRest(EnderecoRest endereco);
 
     public EnderecoRest AtualizarEnderecoRest(EnderecoRest endereco);
 
-    public EnderecoRest BuscarEnderecoRest(String id_endereco);
+    public EnderecoRest BuscarEnderecoRest(Integer id_endereco);
 
-    public String DeletarEnderecoRest(String id_endereco);
+    public String DeletarEnderecoRest(Integer id_endereco);
 
 }

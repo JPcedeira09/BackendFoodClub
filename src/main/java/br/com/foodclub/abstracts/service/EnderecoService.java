@@ -9,13 +9,13 @@ public interface EnderecoService {
 
 	EnderecoCliente atualizarCliente(EnderecoCliente endereco);
 
-	EnderecoCliente buscarCliente(String id_endereco);
+	EnderecoCliente buscarCliente(Integer id_endereco);
 
-	String deletarCliente(String id_endereco);
+	String deletarCliente(Integer id_endereco);
 
-	EnderecoRest buscarRest(String id_endereco);
+	EnderecoRest buscarRest(Integer id_endereco);
 
-	String deletarRest(String id_endereco);
+	String deletarRest(Integer id_endereco);
 
 	EnderecoRest atualizarRest(EnderecoRest endereco);
 

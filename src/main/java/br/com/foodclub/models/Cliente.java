@@ -34,7 +34,11 @@ public class Cliente {
 	private EnderecoCliente endereco;
 
 	public String getcpf() {
-		return cpf;
+		if(cpf != null) {
+		return cpf;}
+		else {
+			return "";
+		}
 	}
 
 	public void setcpf(String cpf) {
@@ -89,10 +93,11 @@ public class Cliente {
 		this.endereco = endereco;
 	}
 
+
+
 	@Override
 	public String toString() {
-		return "Cliente [cpf=" + cpf + ", nome=" + nome + ", senha=" + senha + ", cel=" + cel + ", telefone=" + telefone
-				+ ", email=" + email + "]";
+		return cpf + ";" + nome + ";" + senha + ";" + cel + ";" + telefone + ";" + email + ";" + endereco;
 	}
 
 	public Cliente(String cpf, String nome, String senha, String cel, String telefone, String email) {

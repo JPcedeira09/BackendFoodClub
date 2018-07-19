@@ -18,7 +18,5 @@ public interface RestauranteService {
     public List<Restaurante> buscarLista();
 
     public List<Prato> ListarCardapio(String CNPJ);
-
-    public Restaurante getByID(String ID);
     
 }

@@ -79,14 +79,14 @@ public class EnderecoDB implements EnderecoDAO{
 	}
 
 	@Override
-	public EnderecoCliente BuscarEnderecoCliente(String id_endereco) {
+	public EnderecoCliente BuscarEnderecoCliente(Integer id_endereco) {
 
 		String query = "SELECT * FROM mydb.endereco_cliente where id_enderecos = ? ";
 		EnderecoCliente endereco = new EnderecoCliente();
 
 		try {
 			PreparedStatement statement = this.connection.prepareStatement(query);
-			statement.setString(1, id_endereco);
+			statement.setInt(1, id_endereco);
 			ResultSet set = statement.executeQuery();
 			while(set.next()) {
 				endereco.setId_enderecos(set.getInt("id_enderecos"));
@@ -107,12 +107,12 @@ public class EnderecoDB implements EnderecoDAO{
 	}
 
 	@Override
-	public String DeletarEnderecoCliente(String id_endereco) {
+	public String DeletarEnderecoCliente(Integer id_endereco) {
 		String query = "DELETE FROM mydb.endereco_cliente WHERE id_enderecos= ?";
 
 		try {
 			PreparedStatement statement = this.connection.prepareStatement(query);
-			statement.setString(1, id_endereco);
+			statement.setInt(1, id_endereco);
 			statement.execute();
 			
 			System.out.println("<<<iNFO: Cadastro com id:"+id_endereco+", deletou o endereço.>>>");
@@ -176,13 +176,13 @@ public class EnderecoDB implements EnderecoDAO{
 	}
 
 	@Override
-	public EnderecoRest BuscarEnderecoRest(String id_endereco) {
+	public EnderecoRest BuscarEnderecoRest(Integer id_endereco) {
 		String query = "SELECT * FROM mydb.endereco_rest where id_enderecos = ? ";
 		EnderecoRest endereco = new EnderecoRest();
 
 		try {
 			PreparedStatement statement = this.connection.prepareStatement(query);
-			statement.setString(1, id_endereco);
+			statement.setInt(1, id_endereco);
 			ResultSet set = statement.executeQuery();
 			while(set.next()) {
 				endereco.setId_enderecos(set.getInt("id_enderecos"));
@@ -201,12 +201,12 @@ public class EnderecoDB implements EnderecoDAO{
 	}
 
 	@Override
-	public String DeletarEnderecoRest(String id_endereco) {
+	public String DeletarEnderecoRest(Integer id_endereco) {
 		String query = "DELETE FROM mydb.endereco_rest WHERE id_enderecos= ?";
 
 		try {
 			PreparedStatement statement = this.connection.prepareStatement(query);
-			statement.setString(1, id_endereco);
+			statement.setInt(1, id_endereco);
 			statement.execute();
 			
 			System.out.println("<<<iNFO: Cadastro com id:"+id_endereco+", deletou o endereço.>>>");

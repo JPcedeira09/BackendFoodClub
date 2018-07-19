@@ -7,44 +7,15 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import br.com.foodclub.abstracts.dao.CardapioDAO;
-import br.com.foodclub.abstracts.dao.jpa.CRUDImplementacao;
 import br.com.foodclub.models.Prato;
 
 @Repository
 public class CardapioDB implements CardapioDAO {
 
 	Connection connection;
-	
-	@Autowired
-	private CRUDImplementacao<Prato, Integer, String> crud;
-
-	public void delete(Prato objeto) {
-		crud.delete(objeto);
-	}
-
-	public void deleteById(Integer ID) {
-		crud.deleteById(ID);
-	}
-
-	public List<Prato> getAll(Prato objeto) {
-		return crud.getAll(objeto);
-	}
-
-	public Prato getByID(Integer ID) {
-		return crud.getByID(ID);
-	}
-
-	public void persist(Prato objeto) {
-		crud.persist(objeto);
-	}
-
-	public Prato update(Prato objeto,Integer ID) {
-		return crud.update(objeto,ID);
-	} 
 	
 	public Prato BuscarPrato(int id_cardapio) {
 

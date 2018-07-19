@@ -7,11 +7,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import br.com.foodclub.abstracts.dao.RestauranteDAO;
-import br.com.foodclub.abstracts.dao.jpa.CRUDImplementacao;
 import br.com.foodclub.models.Prato;
 import br.com.foodclub.models.Restaurante;
 import br.com.foodclub.utils.ConnectionFactory;
@@ -19,34 +17,6 @@ import br.com.foodclub.utils.ConnectionFactory;
 
 @Repository
 public class RestauranteDB implements RestauranteDAO {
-	
-	@Autowired
-	private CRUDImplementacao<Restaurante, Integer, String> crud;
-
-	public void delete(Restaurante objeto) {
-		crud.delete(objeto);
-	}
-
-	public void deleteById(Integer ID) {
-		crud.deleteById(ID);
-	}
-
-	public List<Restaurante> getAll(Restaurante objeto) {
-		return crud.getAll(objeto);
-	}
-	
-	@Override
-	public Restaurante getByCode(String ID) {
-		return crud.getByCode(ID);
-	}
-
-	public void persist(Restaurante objeto) {
-		crud.persist(objeto);
-	}
-
-	public Restaurante update(Restaurante objeto,Integer ID) {
-		return crud.update(objeto,ID);
-	} 
 	
 	private Connection connection;
 

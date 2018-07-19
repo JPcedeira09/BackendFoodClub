@@ -18,8 +18,5 @@ public interface RestauranteDAO {
     public List<Restaurante> BuscarRestaurantes();
 
     public List<Prato> ListarCardapio(String CNPJ);
-    
-	public Restaurante getByCode(String ID);
-
 
 }

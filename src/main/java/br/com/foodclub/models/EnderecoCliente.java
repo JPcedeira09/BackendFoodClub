@@ -4,7 +4,7 @@ import com.google.gson.Gson;
 
 public class EnderecoCliente {
 
-	private int id_enderecos;
+	private Integer id_enderecos;
 	private String CEP;
 	private String bairro;
 	private String cidade;
@@ -12,13 +12,13 @@ public class EnderecoCliente {
 	private String cpf;
 	private String rua;
 	private String complemento;
-	
-		
-	public int getId_enderecos() {
+
+
+	public Integer getId_enderecos() {
 		return id_enderecos;
 	}
 
-	public void setId_enderecos(int id_enderecos) {
+	public void setId_enderecos(Integer id_enderecos) {
 		this.id_enderecos = id_enderecos;
 	}
 
@@ -81,11 +81,8 @@ public class EnderecoCliente {
 	public EnderecoCliente() {
 		super();
 	}
-	
-	
-	
-	
-	public EnderecoCliente(int id_enderecos, String cEP, String bairro, String cidade, String estado, String cpf,
+
+	public EnderecoCliente(Integer id_enderecos, String cEP, String bairro, String cidade, String estado, String cpf,
 			String rua, String complemento) {
 		super();
 		this.id_enderecos = id_enderecos;
@@ -104,7 +101,7 @@ public class EnderecoCliente {
 				+ cidade + ", estado=" + estado + ", cpf=" + cpf + ", rua=" + rua + ", complemento=" + complemento
 				+ "]";
 	}
-	
+
 	public String toJSON() {
 		return new Gson().toJson(this);
 	}
